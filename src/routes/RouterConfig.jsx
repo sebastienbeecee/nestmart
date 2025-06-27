@@ -10,6 +10,7 @@ import Details from "../pages/details/Details";
 import dbJson from "../../db.json";
 import axios from "axios";
 import Cart from "../components/cart/Cart";
+import MigrateData from "../components/admin/MigrateData";
 import context from "react-bootstrap/esm/AccordionContext";
 
 const MyContext = createContext();
@@ -75,6 +76,7 @@ const RouterConfig = (props) => {
             element={<Details data={productData} />}
           />
           <Route exact path="/cart" element={<Cart />} />
+          <Route exact path="/migrate" element={<MigrateData />} />
           <Route exact path="/404" element={<NotFount />} />
         </Routes>
 
